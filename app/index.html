@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI: all 55 trophies, roadmap and tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: every official name, description and grade, a cited guide for each, a roadmap to the platinum, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; offline guide</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="tagline">All 55 trophies &mdash; 1 platinum, 2 gold, 6 silver, 46 bronze &mdash; each with its official name and description, a guide in our own words, and the sources every fact came from. One playthrough, no online trophies, about 200 hours to the platinum.</p>
+  </div>
+  <div class="progress-panel" aria-label="Your progress">
+    <p class="progress-count"><strong id="earned-count">0</strong> of <span id="total-count">55</span> earned</p>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div>
+    <ul class="grade-counts" id="grade-counts"></ul>
+    <p class="progress-note">Progress saves in this browser automatically.</p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" id="view-checklist" class="view-tab active" aria-pressed="true">Checklist</button>
+  <button type="button" id="view-roadmap" class="view-tab" aria-pressed="false">Roadmap to Platinum</button>
+</nav>
+
+<section class="toolbar" id="toolbar" aria-label="Checklist controls">
+  <label class="search-label">Search <input type="search" id="search" placeholder="Trophy name or keyword&hellip;" autocomplete="off"></label>
+  <div class="kind-filters" id="kind-filters" role="group" aria-label="Filter by kind"></div>
+  <label class="grade-label">Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="grade-label">Show
+    <select id="earned-filter">
+      <option value="all">Earned + unearned</option>
+      <option value="unearned">Unearned only</option>
+      <option value="earned">Earned only</option>
+    </select>
+  </label>
+  <label class="spoiler-toggle"><input type="checkbox" id="spoiler-toggle"> Hide story spoilers</label>
+  <div class="file-actions">
+    <button type="button" id="export-progress">Export progress</button>
+    <label class="import-label">Import progress <input type="file" id="import-progress" accept="application/json,.json"></label>
+    <button type="button" id="reset-progress">Reset</button>
+  </div>
+  <p class="filter-note" id="filter-note" aria-live="polite"></p>
+</section>
+
+<main>
+  <section id="checklist-view" aria-label="Trophy checklist">
+    <p class="missable-banner" id="missable-banner"><strong>Watch out:</strong> Positive Mental Attitude is the only trophy reported as possibly missable &mdash; meditate with Lucia on her balcony in Chapter 1, the morning after Down to Earth. Use the Missable filter to see it on its own.</p>
+    <ol class="trophy-list" id="trophy-list"></ol>
+    <p class="empty-note" id="empty-note" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+  </section>
+
+  <section id="roadmap-view" aria-label="Roadmap to the platinum" hidden>
+    <p class="roadmap-intro">Six stages, in order: story first, then the side content, then the 100% checklist, then cleanup. The platinum pops by itself at the end. Trophies you have already ticked off in the checklist show as done here too.</p>
+    <ol class="roadmap-stages" id="roadmap-stages"></ol>
+    <p class="roadmap-source">Roadmap built from the official trophy descriptions and the published guides cited beside each trophy (GTABase and PowerPyx). Difficulty 4/10, about 200 hours, one playthrough, no online play.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Names and descriptions are the official PlayStation ones. Every guide is written for this entry, in its own words, and names its sources beside it; where no published guide has confirmed the steps yet, the guide says so plainly. This guide works fully offline and fetches nothing. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
